@@ -7,7 +7,7 @@ async function toggleDeclutter(tab) {
   // Update icon to show state
   browser.browserAction.setIcon({
     path: {
-      48: isEnabled ? "icon48.png" : "icon48_disabled.png"
+      48: isEnabled ? "icon48.svg" : "icon48_disabled.svg"
     }
   });
   
@@ -38,7 +38,7 @@ browser.storage.local.get('isEnabled').then(result => {
   isEnabled = result.isEnabled ?? true;
   browser.browserAction.setIcon({
     path: {
-      48: isEnabled ? "icon48.png" : "icon48_disabled.png"
+      48: isEnabled ? "icon48.svg" : "icon48_disabled.svg"
     }
   });
 });
